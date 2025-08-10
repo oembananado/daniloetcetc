@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal de Notícias</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #c4170c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .card img, 
+  .card video {
+    width: 100%;
+    display: block;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #333;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    margin: 0 15px 15px;
+    color: #555;
+  }
+
+  .materia {
+    grid-column: 1 / -1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  .materia h1 {
+    font-size: 1.8rem;
+    color: #c4170c;
+    margin-bottom: 15px;
+  }
+
+  .materia p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .imagens-duplas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .imagens-duplas img {
+    max-width: 48%;
+    border-radius: 8px;
+  }
+
+  /* Estilos do spoiler */
+  #spoiler-img {
+    display: none; /* começa escondida */
+    margin: 20px auto 0 auto; /* centraliza horizontalmente */
+    max-width: 90%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+
+  #spoiler-btn {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto; /* centraliza o botão */
+  }
+
+  #spoiler-btn:hover {
+    background-color: #666;
+  }
+
+  /* Container menor para notícias menores */
+  .small-container {
+    width: 90%;
+    max-width: 700px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 40px auto;
+  }
+
+  .template-text {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 12px;
+    background-color: #444;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .tab:hover {
+    background-color: #666;
+  }
+
+  .destaque {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  /* Centraliza e limita o vídeo */
+  .card video {
+    max-width: 90%;   /* Limita o tamanho */
+    margin: 0 auto;   /* Centraliza horizontalmente */
+    display: block;   /* Pra margin auto funcionar */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+</style>
+</head>
+<body>
+
+<header>Meu Portal de Notícias</header>
+
+<div class="container">
+
+  <!-- Matéria principal -->
+  <div class="materia">
+    <h1>Jovem morre carbonizado em centro esportivo no Dia dos Pais</h1>
+    <p>Na madrugada deste domingo, Dia dos Pais, um jovem foi encontrado sem vida e com o corpo carbonizado no Parque Esportivo Castelo Branco. A Polícia Militar investiga as circunstâncias da morte e, até o momento, trabalha com a hipótese de suicídio.</p>
+
+    <p>De acordo com informações obtidas no local, na residência da vítima foram encontrados objetos como armas e entorpecentes, além de seu celular, que estava desbloqueado. O aparelho poderá ajudar a esclarecer o que aconteceu nas horas que antecederam a tragédia.</p>
+
+    <!-- Duas imagens lado a lado -->
+    <div class="imagens-duplas">
+      <img src="parque.png" width="300" height="200" alt="Parque com árvores e sol">
+      <img src="POLICIA.png" width="300" height="200" alt="Imagem 2">
+    </div>
+
+    <p>Apesar das evidências no local, ainda pairam dúvidas sobre o desfecho da ocorrência. Até o momento, não se sabe se o indivíduo da periferia realmente está morto, já que exames periciais ainda não foram concluídos. A polícia também não descarta a possibilidade de que ele possa representar algum tipo de ameaça, caso circunstâncias ainda desconhecidas venham à tona.</p>
+
+    <p>Durante a perícia, um objeto incomum foi encontrado dentro de uma lixeira próxima ao local. O dispositivo, de aparência incomum e natureza ainda não identificada, está sendo analisado por equipes especializadas. Segundo as autoridades, não é possível, por enquanto, determinar sua função ou ligação com o caso.</p>
+  </div>
+
+<!-- Spoiler da imagem -->
+<div class="materia">
+  <h2>Imagem Da Vitima carbonizada ⟮AVISO DE CONTEUDO SENSIVEL⟯</h2>
+  <button id="spoiler-btn">Mostrar Spoiler</button>
+  <img id="spoiler-img" src="daniloimagem1.png" alt="Spoiler" style="display:none;">
+</div>
+
+<script>
+  const btn = document.getElementById("spoiler-btn");
+  const img = document.getElementById("spoiler-img");
+
+  // Cria o áudio do alarme
+  const alarmSound = new Audio('alarme.mp3');
+
+  btn.addEventListener("click", () => {
+    alert("⚠️ Conteúdo sensível à frente. Clique OK para continuar.");
+
+    // Toca o som do alarme quando confirmar o popup
+    alarmSound.play();
+
+    // Mostra a imagem e esconde o botão
+    img.style.display = "block";
+    btn.style.display = "none";
+  });
+</script>
+
+
+  <!-- Notícia com vídeo -->
+  <div class="card">
+    <video controls>
+      <source src="Rap do Goku (Dragon Ball Z) _ Tauz RapTributo 02.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+    <h2>Outra manchete de vídeo</h2>
+    <p>Resumo do vídeo e detalhes do conteúdo...</p>
+  </div>
+
+</div>
+
+<!-- Container menor para notícia menor e links -->
+<div class="small-container">
+  <p class="destaque">¨OUTRA NOTICIA MAIS IMPORTANTE QUE ESSA QUE ACABOU DE LER!¨</p>
+  <div class="template-text">
+    <p>Fortnite mistura Power Rangers e Spartans do Halo na nova temporada Shock ‘N’ Awesome.</p>
+  </div>
+  <div class="imagens-duplas" style="justify-content:center;">
+    <img src="FORTNITE.png" width="300" height="200" alt="Imagem Fortnite">
+  </div>
+
+  <div class="tabs">
+    <a href="https://www.techenet.com/2025/08/fortnite-mistura-power-rangers-e-spartans-do-halo-na-nova-temporada-shock-n-awesome/" class="tab" target="_blank">🔗 Link 1</a>
+    <a href="https://www.tiktok.com/@chinelohavaiana92928/video/7532735143459556664?q=resenha&t=1754783950217" class="tab" target="_blank">🔗 Link 2</a>
+    <a href="https://pt.wikipedia.org/wiki/Femboy" class="tab" target="_blank">🔗 Link 3</a>
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById("spoiler-btn");
+  const img = document.getElementById("spoiler-img");
+
+  btn.addEventListener("click", () => {
+    img.style.display = "block";
+    btn.style.display = "none";
+  });
+</script>
+
+</body>
+</html>
